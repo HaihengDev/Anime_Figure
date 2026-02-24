@@ -1,21 +1,39 @@
-// import { useState } from "react";
+import { useState } from "react";
+import { imageUtil } from "../utilities/imageUtil.jsx";
+import "./style/card.css";
 
 export default function Card({ name, imgUrl, price, color }) {
-  <figure className="card">
-    <img url={imageUtil(imgUrl)} alt={name} />
+  const [hover, setHover] = useState(false);
 
-    <h3>{name}</h3>
+  const style = {
+    boxShadow: hover ? `2px 4px 12px ${color}` : "none",
+    transition: "0.3s ease",
+  };
 
-    <div className="price-wrapper">
-      <p>Price:</p>
-      <p>
-        <b>{price}</b>
-      </p>
-    </div>
+  return (
+    <figure
+      className="card"
+      style={style}
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
+    >
+      <div className="img-wrapper">
+        <img src={imageUtil(imgUrl)} alt={name} />
+      </div>
 
-    <div className="button-wrapper">
-      <button>Learn More</button>
-      <button>Add to cart</button>
-    </div>
-  </figure>;
+      <h3>{name}</h3>
+
+      <div className="price-wrapper">
+        <p>Price:</p>
+        <p>
+          <b>${price}</b>
+        </p>
+      </div>
+
+      <div className="button-wrapper">
+        <button>Learn More</button>
+        <button>Add to cart</button>
+      </div>
+    </figure>
+  );
 }

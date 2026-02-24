@@ -23,7 +23,7 @@
             "id": 3,
             "name": "Zenitsu Agatsuma",
             "imgUrl": "../assets/zenitsu.png",
-            "pirce": 159.99,
+            "price": 159.99,
             "color": "#f6c700"
           },
 
@@ -32,7 +32,7 @@
             "name": "Inosuke Hashibira",
             "imgUrl": "../assets/inosuke.png",
             "price": 169.99,
-            "color": "$1e3a8a"
+            "color": "#1e3a8a"
           }
         ]
       }
