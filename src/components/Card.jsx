@@ -1,6 +1,9 @@
+import { useNavigate } from "react-router-dom";
 import "./style/card.css";
 
-export default function Card({ name, imgUrl, stock, price }) {
+export default function Card({ code, name, imgUrl, stock, price }) {
+  const navigate = useNavigate();
+
   return (
     <figure>
       <img src={imgUrl} alt={name} />
@@ -23,7 +26,7 @@ export default function Card({ name, imgUrl, stock, price }) {
       </div>
 
       <div className="btn-wrapper">
-        <button>Learn More</button>
+        <button onClick={() => navigate(`/${code}`)}>Learn More</button>
         <button>Add to cart</button>
       </div>
     </figure>

@@ -7,6 +7,7 @@ export default function CardLayout({ data }) {
       {data.map((d) => (
         <Card
           key={d.code}
+          code={d.code}
           name={d.name}
           imgUrl={d.image[0]}
           stock={d.stock}

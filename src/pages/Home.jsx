@@ -3,6 +3,7 @@ import CardLayout from "../components/CardLayout";
 
 const Home = () => {
   const products = useProducts();
+  console.log(products);
 
   return <CardLayout data={products} />;
 };

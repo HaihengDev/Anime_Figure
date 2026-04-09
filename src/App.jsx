@@ -1,12 +1,14 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import DetailCard from "./pages/DetailCard";
+import Detail from "./pages/Detail";
+import Error from "./pages/Error";
 
 const App = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/:code" element={<DetailCard />} />
+      <Route path="/:code" element={<Detail />} />
+      <Route path="*" element={<Error />} />
     </Routes>
   );
 };
