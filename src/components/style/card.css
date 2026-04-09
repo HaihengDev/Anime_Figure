@@ -1,0 +1,89 @@
+figure {
+  width: 400px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+}
+
+img {
+  height: 70%;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+figcaption {
+  font-size: 1.54rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.stock-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 1rem;
+  gap: 2rem;
+}
+
+.stock-wrapper p:last-child {
+  color: #958f8f;
+  font-weight: 600;
+}
+
+.price-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.btn-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: cetner;
+  padding: 0.5rem 1rem;
+  gap: 1rem;
+}
+
+.btn-wrapper button {
+  flex: 1;
+  font-size: 1rem;
+  border: none;
+  padding: 0.5rem;
+}
+
+.btn-wrapper button:first-child {
+  background: transparent;
+  color: #1e90ff;
+}
+
+.btn-wrapper button:first-child:hover {
+  color: black;
+  background: rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-wrapper button:last-child {
+  background: #1e90ff;
+  color: white;
+  font-weight: 600;
+}
+
+.btn-wrapper button:last-child:hover {
+  background: #1e8fffd2;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.alert-stock {
+  background: #d20303;
+  color: white;
+  padding: 0.4rem;
+  text-align: center;
+  font-weight: 600;
+}
