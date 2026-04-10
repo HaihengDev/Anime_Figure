@@ -1,8 +1,6 @@
-import Error from '../pages/404.jsx';
-
 export default function DetailCard({ product }) {
   if (!product) {
-    return <Error />;
+    return <p>Loading...</p>;
   }
 
   return (
