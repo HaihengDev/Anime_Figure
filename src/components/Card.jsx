@@ -5,7 +5,6 @@ export default function Card({ code, name, imgUrl, stock, price }) {
 
   return (
     <figure className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300 w-72">
-      {/* Image */}
       <div className="h-80 w-full overflow-hidden">
         <img
           src={imgUrl}
@@ -14,14 +13,11 @@ export default function Card({ code, name, imgUrl, stock, price }) {
         />
       </div>
 
-      {/* Content */}
       <div className="p-4 space-y-3">
-        {/* Name */}
         <figcaption className="text-lg font-semibold text-gray-800 truncate">
           {name}
         </figcaption>
 
-        {/* Stock */}
         {stock == 0 ? (
           <div className="bg-red-100 text-red-600 text-sm px-3 py-1 rounded-lg inline-block">
             Out of stock!
@@ -33,13 +29,11 @@ export default function Card({ code, name, imgUrl, stock, price }) {
           </div>
         )}
 
-        {/* Price */}
         <div className="flex justify-between items-center">
           <p className="text-gray-600 text-sm">Price:</p>
           <p className="text-lg font-bold text-green-600">${price}</p>
         </div>
 
-        {/* Buttons */}
         <div className="flex gap-2 pt-2">
           <button
             onClick={() => navigate(`/${code}`)}

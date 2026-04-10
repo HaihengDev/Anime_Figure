@@ -3,9 +3,7 @@ import Card from './Card.jsx';
 export default function CardLayout({ data }) {
   return (
     <div className="min-h-screen bg-gray-100 py-8 px-4">
-      {/* Container */}
       <div className="max-w-7xl mx-auto">
-        {/* Grid */}
         <div
           className="grid gap-6 
                         grid-cols-1 
