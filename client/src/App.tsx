@@ -1,5 +1,7 @@
+import AppRouter from './components/AppRouter';
+
 const Page = () => {
-  return <h1>Hello, World</h1>;
+  return <AppRouter />;
 };
 
 export default Page;
