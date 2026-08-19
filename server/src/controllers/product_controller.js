@@ -21,8 +21,11 @@ export const getProductById = async (req, res) => {
 
     return res.status(200).json(product);
   } catch (err) {
-    return res.status(500).json({
-      message: 'Internal Server Error',
+    const statusCode =
+      err.statusCode || err.message === 'Invalid id format.' ? 400 : 500;
+
+    return res.status(statusCode).json({
+      message: statusCode === 500 ? 'Internal Server Error' : err.message,
       error: err.message,
     });
   }
