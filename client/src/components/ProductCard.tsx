@@ -10,7 +10,7 @@ export default function ProductCard({
   return (
     <figure className="group w-full max-w-sm overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
       {/* Image */}
-      <div className="relative aspect-square overflow-hidden bg-gray-100">
+      <div className="relative aspect-[3/4] overflow-hidden bg-gray-100">
         <img
           src={image}
           alt={product_name}

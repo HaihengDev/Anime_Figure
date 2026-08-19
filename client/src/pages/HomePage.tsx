@@ -1,5 +1,7 @@
+import CardProductLayout from '../components/ProductCardLayout';
+
 const Page = () => {
-  return <h1>Home Page</h1>;
+  return <CardProductLayout />;
 };
 
 export default Page;
